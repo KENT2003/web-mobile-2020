@@ -63,7 +63,7 @@ const listItem = Vue.component('listItem',{
                 index: this.index
                 };
             console.log(playload)
-            this.$store.commit('deleteClass',playload);//傳送數據
+            // this.$store.commit('deleteClass',playload);//傳送數據
             this.deletePage = !this.deletePage;
             
         },
@@ -270,6 +270,7 @@ const addClass = Vue.component('addClass',{
                 .then(() => this.sharePage = !this.sharePage)
                 .catch((error) => console.log('Sharing failed', error));
               }
+            else
             {
                 alert("Sorry, your browser does not support this function")
             }
