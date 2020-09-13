@@ -63,7 +63,7 @@ const listItem = Vue.component('listItem',{
                 index: this.index
                 };
             console.log(playload)
-            // this.$store.commit('deleteClass',playload);//傳送數據
+            this.$store.commit('deleteClass',playload);//傳送數據
             this.deletePage = !this.deletePage;
             
         },
@@ -576,6 +576,7 @@ const listAll = Vue.component('listAll',{
                 .then(() => this.sharePage = !this.sharePage)
                 .catch((error) => console.log('Sharing failed', error));
               }
+            else
             {
                 alert("Sorry, your browser does not support this function")
             }
@@ -848,6 +849,7 @@ const listFavourite = Vue.component('listFavourite',{
                 .then(() => this.sharePage = !this.sharePage)
                 .catch((error) => console.log('Sharing failed', error));
               }
+            else
             {
                 alert("Sorry, your browser does not support this function")
             }
@@ -1129,6 +1131,7 @@ const listClass = Vue.component('listClass',{
                 .then(() => this.sharePage = !this.sharePage)
                 .catch((error) => console.log('Sharing failed', error));
               }
+            else
             {
                 alert("Sorry, your browser does not support this function")
             }
